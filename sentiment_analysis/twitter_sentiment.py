@@ -22,10 +22,11 @@ api = tweepy.API(auth)
 #print(user.screen_name)
 #print(user.followers_count)
 
+query=input("Enter your query: ")
 #Get tweets using tweepy 
 max_tweets = 10
 tweets = [status for status in tweepy.Cursor(api.search,
-                                             q="KP Oli",
+                                             q=query,
                                              result_type="recent",
                                              tweet_mode="extended",
                                              lang="en",
