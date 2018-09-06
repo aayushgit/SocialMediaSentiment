@@ -5,15 +5,10 @@ Created on Sat Sep  1 12:45:09 2018
 
 @author: aayushsharma
 """
-
+import auth
 import tweepy
 from nltk.sentiment.vader import SentimentIntensityAnalyzer as SIA
 import matplotlib.pyplot as plt
-#Authorization keys
-CONSUMER_KEY='tmqkengI7kRvu8mCqz2Aup4Y7'
-CONSUMER_SECRET='mpWObDLMK9Sx64bYUmXj7c7wVTzyg1xlUAoq1vlK8EAgfHokXP'
-ACCESS_TOKEN='593201197-dsIDuMxEH02bpJLL2WnRFmf9SrMo8FNhuaXVdcxi'
-ACCESS_TOKEN_SECRET='7ZuJhrAaFOKrT0mPy59659tPbUO1pAC5VxrzlHS2NRjF1'
 auth = tweepy.OAuthHandler(CONSUMER_KEY,CONSUMER_SECRET)
 auth.set_access_token(ACCESS_TOKEN,ACCESS_TOKEN_SECRET)
 api = tweepy.API(auth)
